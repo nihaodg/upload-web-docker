@@ -1,0 +1,5 @@
+flask
+flask-httpauth
+python-dotenv
+humanize
+gunicorn        # 可选，先留着

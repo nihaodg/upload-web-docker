@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>Cyber Files</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+  <h1>⚡ CYBER FILES</h1>
+  <div class="glass">
+    <form id="upForm" enctype="multipart/form-data">
+      <input type="file" name="file" id="file" required>
+      <button type="submit">上传</button>
+      <div class="bar"><div id="progress"></div></div>
+    </form>
+  </div>
+  <div class="glass files">
+    {% for f in files %}
+    <div class="row">
+      <span class="name">{{ f.name }}</span>
+      <span class="size">{{ f.size }}</span>
+      <span class="time">{{ f.time }}</span>
+      <a class="btn" href="{{ url_for('download', name=f.name) }}">下载</a>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
