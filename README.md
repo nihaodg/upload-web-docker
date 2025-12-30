@@ -44,3 +44,13 @@ http://<你的服务器IP>:5000
 docker logs my-file-server --tail 50
 ```
 
+
+
+
+
+这个新增加了密码的
+
+```
+admin /your666
+```
+
